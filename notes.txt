@@ -1,0 +1,18 @@
+Contract Address:
+0x5fbdb2315678afecb367f032d93f642f64180aa3
+
+Network:
+Hardhat Local (Chain ID: 31337)
+
+Working Features:
+- addRecord()
+- grantAccess()
+- revokeAccess()
+- getRecords()
+
+Test Account:
+0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+
+To Run vinit....
+npx hardhat node
+npx hardhat run scripts/deploy.js --network localhost
