@@ -1,17 +1,17 @@
-import hre from "hardhat";
+const hre = require("hardhat");
 
 async function main() {
 
-    const MediVault = await hre.ethers.getContractFactory("MediVault");
+    const MediVault = await hre.ethers.getContractFactory("MediVaultX");
 
     const mediVault = await MediVault.deploy();
 
-    await mediVault.waitForDeployment();
+    await mediVault.deployed();
 
-    console.log("MediVault deployed to:", await mediVault.getAddress());
+    console.log("MediVault deployed to:", mediVault.address);
 }
 
 main().catch((error) => {
     console.error(error);
-    process.exitCode = 1;
+    process.exit(1);
 });
